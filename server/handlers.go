@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"strings"
+
+	"github.com/okolilemuel/fleekAsg/filemanager"
 )
 
 type httpHandler func(w http.ResponseWriter, r *http.Request)
@@ -17,7 +19,7 @@ func getFile(path string) httpHandler {
 			log.Println(filename, key)
 		}
 
-		file, err := decryptFile(path+"/"+filename, key)
+		file, err := filemanager.DecryptFile(path+"/"+filename, key)
 		if err != nil {
 			log.Println(err)
 			respondWithJSON(nil, http.StatusOK, false, "File decryption error", w)

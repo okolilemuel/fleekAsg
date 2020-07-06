@@ -1,4 +1,4 @@
-package encryptor
+package filemanager
 
 import (
 	"log"
@@ -8,7 +8,7 @@ import (
 
 type Executor func(filelocation string)
 
-func Watcher(sourcePath string, executor Executor) error {
+func watcher(sourcePath string, executor Executor) error {
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
 		return err
@@ -40,4 +40,9 @@ func Watcher(sourcePath string, executor Executor) error {
 	}
 	<-done
 	return nil
+}
+
+// Watch encrypts any file placed in the source path and stores it in the destination path
+func Watch(source, destination string) {
+	watcher(source, Encryptor(destination))
 }

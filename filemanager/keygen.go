@@ -1,4 +1,4 @@
-package encryptor
+package filemanager
 
 import (
 	"crypto/rand"
