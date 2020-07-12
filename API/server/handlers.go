@@ -6,10 +6,16 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/okolilemuel/fleekAsg/filemanager"
+	"github.com/okolilemuel/fleekAsg/API/filemanager"
 )
 
 type httpHandler func(w http.ResponseWriter, r *http.Request)
+
+func hello(w http.ResponseWriter, r *http.Request) {
+	paths := strings.Split(r.URL.Path, "/")
+	log.Println(paths)
+	respondWithJSON(nil, http.StatusOK, true, "Hello from server", w)
+}
 
 func getFile(path string) httpHandler {
 	return func(w http.ResponseWriter, r *http.Request) {
