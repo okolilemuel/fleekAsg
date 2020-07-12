@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/okolilemuel/fleekAsg/API/filemanager"
+	"github.com/okolilemuel/fleekAsg/filemanager"
 )
 
 type httpHandler func(w http.ResponseWriter, r *http.Request)

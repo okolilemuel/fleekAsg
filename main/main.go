@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/okolilemuel/fleekAsg/API/filemanager"
-	"github.com/okolilemuel/fleekAsg/API/server"
+	"github.com/okolilemuel/fleekAsg/filemanager"
+	"github.com/okolilemuel/fleekAsg/server"
 )
 
 func main() {
