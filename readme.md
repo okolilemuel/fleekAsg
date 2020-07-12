@@ -16,10 +16,6 @@ Follow the steps below to build and run the app
 
 Note: the encryption key is displayed on the terminal after the application has started running
 
-# Run the Test
-
-- run `go test ./...`
-
 # Dependencies
 
 - [fsnotify](github.com/fsnotify/fsnotify) 
