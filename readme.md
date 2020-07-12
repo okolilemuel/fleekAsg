@@ -8,8 +8,8 @@ Follow the steps below to build and run the app
 
 - Clone this repository 
 - Open the terminal or command line in the base directory of the project
-- Build the binary using `go build -ldflags="-w -s" -o ./API/bin/fleekAsg ./API/main/main.go`
-- Run the application using `./API/bin/fleekAsg <sourcePath> <destinationPath>`
+- Build the binary using `go build -ldflags="-w -s" -o ./bin/fleekAsg ./main/main.go`
+- Run the application using `./bin/fleekAsg <sourcePath> <destinationPath>`
 - To get the list of encrypted files call `GET http://localhost:8080/files/`
 - To download a decrypted file, call `http://localhost:8080/file/?key=<encryptionKey>&filename=<fileNme.encrypted>`
     - eg `http://localhost:8080/file/?key=T8dL_xp6WvySO-Duthht6a40v5LrTFfHtAQHbQjJ3xs=&filename=file1.encrypted`
